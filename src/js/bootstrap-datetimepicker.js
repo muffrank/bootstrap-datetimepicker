@@ -1342,7 +1342,7 @@
                 for (index in options.keyBinds) {
                     if (options.keyBinds.hasOwnProperty(index) && typeof (options.keyBinds[index]) === 'function') {
                         keyBindKeys = index.split(' ');
-                        if (keyBindKeys.length === pressedKeys.length && keyMap[currentKey] === keyBindKeys[keyBindKeys.length - 1]) {
+                        if (keyMap[currentKey] === keyBindKeys[keyBindKeys.length - 1]) {
                             handler = options.keyBinds[index];
                         }
                     }
