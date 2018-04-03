@@ -1347,7 +1347,6 @@
                         }
                     }
                 }
-                console.log(handler);
                 if (handler) {
                     handler.call(picker, widget);
                     e.stopPropagation();
