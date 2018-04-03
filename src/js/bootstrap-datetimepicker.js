@@ -1322,12 +1322,10 @@
             keydown = function (e) {
                 var handler = null,
                     index,
-                    index2,
                     pressedKeys = [],
                     pressedModifiers = {},
                     currentKey = e.which,
                     keyBindKeys,
-                    allModifiersPressed,
                     pressed = 'p';
 
                 keyState[currentKey] = pressed;
@@ -1345,21 +1343,11 @@
                     if (options.keyBinds.hasOwnProperty(index) && typeof (options.keyBinds[index]) === 'function') {
                         keyBindKeys = index.split(' ');
                         if (keyBindKeys.length === pressedKeys.length && keyMap[currentKey] === keyBindKeys[keyBindKeys.length - 1]) {
-                            allModifiersPressed = true;
-                            for (index2 = keyBindKeys.length - 2; index2 >= 0; index2--) {
-                                if (!(keyMap[keyBindKeys[index2]] in pressedModifiers)) {
-                                    allModifiersPressed = false;
-                                    break;
-                                }
-                            }
-                            if (allModifiersPressed) {
-                                handler = options.keyBinds[index];
-                                break;
-                            }
+                            handler = options.keyBinds[index];
                         }
                     }
                 }
-
+                console.log(handler);
                 if (handler) {
                     handler.call(picker, widget);
                     e.stopPropagation();
