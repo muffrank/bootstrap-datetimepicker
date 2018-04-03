@@ -2595,20 +2595,21 @@
                 }
                 var d = this.date() || this.getMoment();
                 if (widget.find('.datepicker').is(':visible')) {
-                    this.date(d.clone().subtract(1, 'y'));
+                    this.date(d.clone().subtract(7, 'd'));
                 } else {
-                    this.date(d.clone().add(1, 'h'));
+                    this.date(d.clone().add(this.stepping(), 'm'));
                 }
             },
             'control down': function (widget) {
                 if (!widget) {
+                    this.show();
                     return;
                 }
                 var d = this.date() || this.getMoment();
                 if (widget.find('.datepicker').is(':visible')) {
-                    this.date(d.clone().add(1, 'y'));
+                    this.date(d.clone().add(7, 'd'));
                 } else {
-                    this.date(d.clone().subtract(1, 'h'));
+                    this.date(d.clone().subtract(this.stepping(), 'm'));
                 }
             },
             left: function (widget) {
