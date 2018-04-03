@@ -1,9 +1,9 @@
 {
   "author": {
-    "name": "Jonathan Peterson"
+    "name": "Muhammad Umar Farooq"
   },
   "bugs": {
-    "url": "https://github.com/eonasdan/bootstrap-datetimepicker/issues"
+    "url": "https://github.com/muffrank/bootstrap-datetimepicker/issues"
   },
   "peerDependencies": {
     "bootstrap": "^3.3",
@@ -31,7 +31,7 @@
     "grunt-string-replace": "latest",
     "load-grunt-tasks": "latest"
   },
-  "homepage": "http://eonasdan.github.io/bootstrap-datetimepicker/",
+  "homepage": "https://github.com/muffrank/bootstrap-datetimepicker",
   "keywords": [
     "twitter-bootstrap",
     "bootstrap",
@@ -42,10 +42,10 @@
   ],
   "license": "MIT",
   "main": "src/js/bootstrap-datetimepicker.js",
-  "name": "eonasdan-bootstrap-datetimepicker",
+  "name": "muffrank-bootstrap-datetimepicker",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eonasdan/bootstrap-datetimepicker.git"
+    "url": "https://github.com/muffrank/bootstrap-datetimepicker.git"
   },
   "version": "4.17.47"
 }
